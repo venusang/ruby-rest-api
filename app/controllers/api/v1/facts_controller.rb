@@ -1,7 +1,7 @@
 class Api::V1::FactsController < ApplicationController
   before_action :find_fact, only: [:show, :update, :destroy]
 
-  def index_facts_on_user_id
+  def index
     @facts = Fact.all
     render json: @facts
   end
